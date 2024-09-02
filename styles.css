@@ -40,13 +40,27 @@ p {
   align-items: center;
   justify-content: space-between;
   background-color: #e3e6f3;
-  padding: 20px 80px;
+  padding: 10px 80px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.06);
   z-index: 999;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  height: 80px; /* Fixed header height to prevent resizing */
+  overflow: hidden; /* Ensures content does not overflow */
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.header-logo img {
+  max-height: 70px; /* Increased max-height */
+  width: auto;
+  object-fit: contain; /* Ensures the image fits within the constraints */
 }
 
 .header-list {
@@ -442,4 +456,35 @@ span {
   font-size: 17px;
   border-radius: 0 6px 6px 0;
   cursor: pointer;
+}
+
+/* footer section styles */
+
+#footer{
+  display: flex;
+  align-items:flex-start;
+  justify-content: space-between;
+  padding: 75px;
+  background-color: #ececec;
+}
+#footer div{
+}
+#footer p, #footer a{
+  color: rgb(109, 109, 109);
+  text-decoration: none;
+}
+#footer a:hover{
+  color:#088178;
+}
+#footer .about a{
+  display: block;
+  padding:8px 0;
+}
+#footer .myaccount a{
+  display: block;
+  padding:8px 0;
+}
+#footer .download img{
+  border: 1px solid #08817969;
+  border-radius: 7px;
 }
